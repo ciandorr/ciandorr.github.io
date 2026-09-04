@@ -5,6 +5,8 @@
 	--muted: #333;
 	--link: #800000;
 	--link-visited: #540000;
+	--local-link: #1a5e2a;
+	--local-link-visited: #12401c;
 	--title: #000080;
 	--accent: #232951;
 	--rule: #b3b3b3;
@@ -28,8 +30,11 @@ body {
 	background: #fff;
 }
 
-a:link { color: var(--link); }
-a:visited { color: var(--link-visited); }
+/* Links to files on this site are dark green; links to other websites are dark red. */
+a:link { color: var(--local-link); }
+a:visited { color: var(--local-link-visited); }
+a[href^="http://"]:link, a[href^="https://"]:link { color: var(--link); }
+a[href^="http://"]:visited, a[href^="https://"]:visited { color: var(--link-visited); }
 a:active { color: var(--accent); }
 a:hover { text-decoration: underline; }
 
@@ -222,7 +227,8 @@ ul.links {
 }
 
 ul.links > li {
-	padding: 0;
+	padding: 0 0 0 1.2em;
+	text-indent: -1.2em;   /* hanging indent */
 }
 
 p.teachingkind {
