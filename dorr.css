@@ -146,9 +146,17 @@ ul.items.dated > li.same-year > .year {
 }
 
 ul.items.dated > li.new-year {
-	margin-top: 0.45em;
-	padding-top: 0.45em;
-	border-top: 1px solid #ddd;   /* rule marking a change of year */
+	position: relative;
+}
+
+ul.items.dated > li.new-year::before {
+	/* short rule in the gutter marking a change of year; takes no vertical space */
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: calc(var(--gutter) - 0.6em);
+	border-top: 1px solid #bbb;
 }
 
 .year {
