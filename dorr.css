@@ -129,8 +129,7 @@ ul.items {
 }
 
 ul.items > li {
-	padding: 0 0 4px 12px;
-	text-indent: -12px;   /* hanging indent for titles that wrap */
+	padding: 0 0 4px 0;
 }
 
 summary {
@@ -143,16 +142,9 @@ summary::-webkit-details-marker {
 	display: none;
 }
 
+/* No expand/collapse marker: clicking a title reveals its details. */
 summary::before {
-	content: "\25B8";   /* small right-pointing triangle */
-	display: inline-block;
-	width: 12px;
-	font-size: 0.8em;
-	color: var(--accent);
-}
-
-details[open] > summary::before {
-	content: "\25BE";   /* small down-pointing triangle */
+	content: none;
 }
 
 summary:hover {
