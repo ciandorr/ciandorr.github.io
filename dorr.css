@@ -49,6 +49,7 @@ a:hover { text-decoration: underline; }
 }
 
 #hdr h1 {
+	align-self: center;   /* vertically centred in the header box */
 	margin: 0.2em 0;
 	font-size: 30px;
 	font-weight: normal;
