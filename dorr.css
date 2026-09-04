@@ -11,6 +11,7 @@
 	--control: #307040;
 	--badge: #900;
 	--page-width: 1000px;
+	--gutter: 3.6em;   /* width of the year column beside item lists */
 }
 
 * {
@@ -72,7 +73,7 @@ a:hover { text-decoration: underline; }
 
 .column {
 	min-width: 0;   /* let long URLs wrap rather than widen the column */
-	padding: 4px;
+	padding: 4px 4px 4px var(--gutter);   /* left padding leaves room for the year column */
 }
 
 @media (max-width: 720px) {
@@ -130,6 +131,22 @@ ul.items {
 
 ul.items > li {
 	padding: 0 0 4px 0;
+}
+
+/* Lists with a year column: the year sits in a narrow gutter to the left of the titles. */
+ul.items.dated > li {
+	display: grid;
+	grid-template-columns: var(--gutter) minmax(0, 1fr);
+	margin-left: calc(-1 * var(--gutter));
+}
+
+.year {
+	padding: 0.2em 0.6em 0 0;
+	font-size: 0.8em;
+	line-height: 1.6;
+	text-align: right;
+	color: #777;
+	font-variant-numeric: tabular-nums;
 }
 
 summary {
