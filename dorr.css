@@ -137,13 +137,13 @@ ul.items > li {
 ul.items.dated > li {
 	display: grid;
 	grid-template-columns: var(--gutter) minmax(0, 1fr);
+	align-items: baseline;   /* year sits on the title's first baseline */
 	margin-left: calc(-1 * var(--gutter));
 }
 
 .year {
-	padding: 0.2em 0.6em 0 0;
+	padding-right: 0.6em;
 	font-size: 0.8em;
-	line-height: 1.6;
 	text-align: right;
 	color: #777;
 	font-variant-numeric: tabular-nums;
