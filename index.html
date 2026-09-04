@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cian Dorr</title>
-	<link rel="stylesheet" href="dorr.css?v=2">
+	<link rel="stylesheet" href="dorr.css?v=3">
 	<link rel="icon" href="images/break.ico">
 </head>
 <body>
@@ -938,6 +938,19 @@
 		});
 		ctl.querySelector('.hideall').addEventListener('click', function () {
 			section.querySelectorAll('details').forEach(function (d) { d.open = false; });
+		});
+	});
+	// In dated lists, show a year only when it differs from the item above,
+	// and draw a rule above each change of year (except at the top of a list).
+	document.querySelectorAll('ul.items.dated').forEach(function (list) {
+		var prev = null;
+		list.querySelectorAll(':scope > li').forEach(function (li) {
+			var year = li.querySelector('.year');
+			if (!year) return;
+			var y = year.textContent.trim();
+			if (y === prev) { li.classList.add('same-year'); }
+			else if (prev !== null) { li.classList.add('new-year'); }
+			prev = y;
 		});
 	});
 	// Linking to index.html#some-item-id opens that item.

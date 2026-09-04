@@ -141,6 +141,16 @@ ul.items.dated > li {
 	margin-left: calc(-1 * var(--gutter));
 }
 
+ul.items.dated > li.same-year > .year {
+	visibility: hidden;   /* same year as the item above */
+}
+
+ul.items.dated > li.new-year {
+	margin-top: 0.45em;
+	padding-top: 0.45em;
+	border-top: 1px solid #ddd;   /* rule marking a change of year */
+}
+
 .year {
 	padding-right: 0.6em;
 	font-size: 0.8em;
