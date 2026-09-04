@@ -204,10 +204,6 @@ details > ul {
 	color: var(--muted);
 }
 
-details > :last-child {
-	margin-bottom: 0.5em;
-}
-
 p.abstract {
 	padding-left: 2.5%;
 	border-left: 1px solid var(--rule);
