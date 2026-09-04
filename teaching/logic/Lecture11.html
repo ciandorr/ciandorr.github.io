@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 11.ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">Indirect proof 2: proof by contradiction
+      <ul>
+        <li class="row1">An example: we want to prove ¬(SameRow(a, b) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> SameCol(a, b)) from the premises LeftOf(a, b) and FrontOf(a, b).</li>
+        <li class="row0">Proof: To prove ¬(SameRow(a, b) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> SameCol(a, b)), we assume (SameRow(a, b) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> SameCol(a, b) and derive a contradiction.  Suppose first that SameRow(a, b): this contradicts the premise FrontOf(a, b).  Suppose on the other hand that SameCol(a, b): this contradicts the premise LeftOf(a, b).  So in each case we have a contradiction, which means the original assumption that SameRow(a, b) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> SameCol(a, b) must be false.</li>
+      </ul>
+      </li>
+      <li class="row1">Proof by contradiction
+      <ul>
+        <li class="row0">If we can derive a contradiction from a certain assumption, together with other premises, we can infer the negation of that assumption from those premises.</li>
+        <li class="row1">A contradiction is something that is obviously logically impossible, i.e. logically can’t be true.  
+        <ul>
+          <li class="row0">For example: anything of the form P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> ¬P.</li>
+          <li class="row1">The ‘contradiction’ symbol</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">More examples
+      <ul>
+        <li class="row1">An informal proof of one direction of one of De Morgan’s Laws: from (¬P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> ¬Q), infer ¬(P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Q).</li>
+        <li class="row0">Proof: Suppose for reductio that P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Q.  Given the premise that (¬P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> ¬Q), there are two cases.  Case 1: ¬P; this contradicts the first conjunct of the assumption that P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Q.  Case 2: ¬Q; this contradicts the second conjunct.  So in either case we have a contradiction.  So we can conclude that ¬(P <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Q).</li>
+      </ul>
+      </li>
+      <li class="row1">For next week
+      <ul>
+        <li class="row0">Read: Chapter 5; optionally, chapter 6.</li>
+        <li class="row1">By hand, use the truth-table method to determine whether the conclusion of each of the following arguments is a tautological consequence of the premises:
+        <ul>
+          <li class="row0">¬(¬A <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> B);  A <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> B; therefore ¬A (10%)</li>
+          <li class="row1">A <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> B; ¬B <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> (C <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> ¬A); therefore C (10%)</li>
+        </ul>
+        </li>
+        <li class="row0">Do: exercises 4.24 (20%); 5.8, 5.15, 5.17, 5.18 (15% each)</li>
+      </ul>
+      </li>
+      <li class="row1">Tautological consequence in Fitch</li>
+    </ul>
+  </body>
+</html>

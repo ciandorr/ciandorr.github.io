@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 23 (mixed quantifiers).ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">Mixed quantifiers
+      <ul>
+        <li class="row1">The order of quantifiers makes a difference:
+        <ul>
+          <li class="row0"><span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x<span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>y(Hates(x,y)) vs <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>x<span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>y(Hates(x,y))</li>
+          <li class="row1"><span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x<span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>y(SameCol(x,y)) vs <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>x<span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>y(SameCol(x,y))</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">The step-by-step method of translation
+      <ul>
+        <li class="row1">This is very useful for sentences that contain several quantified noun phrases.</li>
+        <li class="row0">EG: ‘Every dog lives in some kennel’
+        <ul>
+          <li class="row1">Step one: <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Dog(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> lives-in-some-kennel(x))</li>
+          <li class="row0">Step two: <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Dog(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>y(Kennel(y) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> LivesIn(x,y))</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row1">
+      <ul>
+        <li class="row0">EG: ‘Every dog who lives in a kennel has an owner who lives in a house’.
+        <ul>
+          <li class="row1">Step One: <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Dog(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>lives-in-a-kennel(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> has-an-owner-who-lives-in-a-house(x)).</li>
+          <li class="row0">Step Two: <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Dog(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧∃</span>y(Kennel(y) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> LivesIn(x,y)) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>z(Owns(x,z) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> lives-in-a-house(z)).</li>
+          <li class="row1">Step Three: <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Dog(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧∃</span>y(Kennel(y) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> LivesIn(x,y)) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>z(Owns(x,z) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>y(House(y) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> LivesIn(z,y))).</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">Ambiguity
+      <ul>
+        <li class="row1">Quantifiers in English are a rich source of ambiguity.  
+        <ul>
+          <li class="row0">‘Some poor sucker is mugged every minute’.
+          <ul>
+            <li class="row1">? <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>x(Poor(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>Sucker(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>mugged-every-minute(x))</li>
+            <li class="row0"><span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Minute(x)<span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span>some-poor-sucker-is-mugged-during(x))</li>
+          </ul>
+          </li>
+        </ul>
+        </li>
+        <li class="row1">Often this ambiguity is resolved by context.  </li>
+      </ul>
+      </li>
+    </ul>
+  </body>
+</html>

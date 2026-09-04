@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 5.ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">Formal proofs
+      <ul>
+        <li class="row1">Jan 20, 2004</li>
+      </ul>
+      </li>
+      <li class="row0">An example of a formal proof in the system F
+      <ul>
+        <li class="row1">SameRow(a, b)</li>
+        <li class="row0">a = c</li>
+        <li class="row1">d = b</li>
+        <li class="row0">SameRow(c, b)	=Elim: 1, 2</li>
+        <li class="row1">d = d	=Intro:</li>
+        <li class="row0">b = d	=Elim: 5, 3</li>
+        <li class="row1">SameRow(c, b)	Reit: 4</li>
+        <li class="row0">SameRow(c, d)	=Elim: 7, 6</li>
+      </ul>
+      </li>
+      <li class="row1">Rules for identity
+      <ul>
+        <li class="row0">=Elim
+        <ul>
+          <li class="row1">Cite: two steps, the second of which is an atomic sentence with the identity predicate.</li>
+          <li class="row0">Infer: something that can be got by taking the first cited step and replacing one or more occurrences of the name on the left of the identity sign in the second cited step with the name on the right of the identity sign.</li>
+        </ul>
+        </li>
+        <li class="row1">=Intro
+        <ul>
+          <li class="row0">Cite: nothing!  (This rule will be unique in this respect)</li>
+          <li class="row1">Infer: an atomic sentence in which the identity predicate is flanked by two occurrences of the same individual constant.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">The Reiteration rule
+      <ul>
+        <li class="row1">Reit:
+        <ul>
+          <li class="row0">Cite: any one previous step</li>
+          <li class="row1">Infer: that step</li>
+        </ul>
+        </li>
+        <li class="row0">This rule is never needed, but it sometimes helps make proofs easier to follow.</li>
+      </ul>
+      </li>
+      <li class="row1">The program Fitch
+      <ul>
+        <li class="row0">Lets us construct and check proofs in F.
+        <ul>
+          <li class="row1">Actually, Fitch is a bit more liberal than F.  EG: ‘a = b’ and ‘b = a’ are treated interchangeably by the =Elim rule.</li>
+          <li class="row0">Proofs that Fitch regards as OK can be expanded into valid proofs in F</li>
+          <li class="row1">But we’ll rarely insist on this.  </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">The Ana Con mechanism
+      <ul>
+        <li class="row1">Fitch also includes some complicated computerised mechanisms for telling whether a given sentence is a consequence of other given sentences.
+        <ul>
+          <li class="row0">It can’t always tell</li>
+          <li class="row1">Church’s Theorem: no computer program can, given finite time.</li>
+        </ul>
+        </li>
+        <li class="row0">The most powerful of these mechanisms is called Ana Con
+        <ul>
+          <li class="row1">You’ll sometimes be allowed to use it in a homework exercise, subject to various limitations.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">Proving nonconsequence
+      <ul>
+        <li class="row1">An argument is invalid when it’s possible for the premises to be true and the conclusion false.</li>
+        <li class="row0">Informal proofs of nonconsequence: describe a possible situation in which the premises are true and the conclusion false, in as much detail as is necessary to make it clear that it’s really a possible situation.</li>
+        <li class="row1">‘Formal’ proofs of nonconsequence in the blocks language: use Tarski’s World to construct a world where the premises are true, conclusion false.</li>
+      </ul>
+      </li>
+    </ul>
+  </body>
+</html>

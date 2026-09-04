@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 6 (Booleans).ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">‘And’, ‘Or’ and ‘Not’
+      <ul>
+        <li class="row1">January 22nd, 2004</li>
+      </ul>
+      </li>
+      <li class="row0"><span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>, <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span>, ¬
+      <ul>
+        <li class="row1">‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>’ is the conjunction symbol — read ‘and’.</li>
+        <li class="row0">‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span>’ is the disjunction symbol — read ‘or’ or ‘either...or...’</li>
+        <li class="row1">‘¬’ is the negation symbol — read ‘not’ or ‘it is not the case that’.
+        <ul>
+          <li class="row0">Collectively, these are known as the Boolean connectives, after the 19th century logician George Boole</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row1">Syntax
+      <ul>
+        <li class="row0">‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>’ and ‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span>’ are binary connectives: they take two sentences and make a new sentence.
+        <ul>
+          <li class="row1">Whenever P and Q are sentences, (P) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> (Q) and (P) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> (Q) are also sentences.</li>
+          <li class="row0">Contrast the English words ‘and’ and ‘or’, which can also conjoin verb phrases (‘Lassie barked and howled’) and noun phrases (‘Dean or Kerry will win’).</li>
+        </ul>
+        </li>
+        <li class="row1">‘¬’ is a unary connective: it takes one sentence and makes a new sentence.
+        <ul>
+          <li class="row0">Whenever P is a sentence, ¬(P) is a sentence.</li>
+          <li class="row1">Contrast the English word ‘not’, which can occur in all sorts of places.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">Thus, we can build up arbitrarily complicated sentences:
+        <ul>
+          <li class="row0">¬(White(snow))</li>
+          <li class="row1">(¬(White(snow))) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> (Green(grass))</li>
+          <li class="row0">(¬(White(snow))) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> (Green(grass)) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> (¬(¬(¬(Red(blood)))))</li>
+          <li class="row1">etc.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">Semantics
+      <ul>
+        <li class="row1">(P) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> (Q) is true when both P and Q are true; it is false when either P or Q is false.
+        <ul>
+          <li class="row0">Unlike the English ‘and’, there’s never any suggestion about temporal order.</li>
+        </ul>
+        </li>
+        <li class="row1">(P) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> (Q) is true when one or both of P and Q is true; it is false when both of them are false.
+        <ul>
+          <li class="row0">Unlike the English ‘or’, there’s never any suggestion that it’s not the case that both P and Q are true.  (<span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> is ‘inclusive’ rather than ‘exclusive’)</li>
+        </ul>
+        </li>
+        <li class="row1">¬(P) is true when P is false; it is false when P is true.</li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">We can sum this up in the form of truth-tables:</li>
+      </ul>
+      </li>
+      <li class="row0">Parentheses
+      <ul>
+        <li class="row1">The notation I’ve just described is quite hard to read because of all the parentheses.</li>
+        <li class="row0">But we can’t just leave out the parentheses altogether.  This would leave us with apparently ambiguous sentences like
+        <ul>
+          <li class="row1">State(guam) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> State(puertorico) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> State(pennsylvania).</li>
+        </ul>
+        </li>
+        <li class="row0">We’ll adopt a more liberal notation that requires parentheses only when they’re required to avoid ambiguity.</li>
+      </ul>
+      </li>
+      <li class="row1">
+      <ul>
+        <li class="row0">We allow ‘¬’ to be followed by a sentence not in parentheses.  In these circumstances ‘¬’ takes narrowest scope:
+        <ul>
+          <li class="row1">¬State(guam) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> State(idaho) is equivalent to ¬(State(guam)) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> State(idaho).</li>
+          <li class="row0">Like ‘-’ in algebra.</li>
+        </ul>
+        </li>
+        <li class="row1">We allow ‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>’ and ‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span>’ to link sentences not in parentheses, when those sentences start with the negation symbol.</li>
+        <li class="row0">We allow multiple sentences to be joined by ‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span>’ and ‘<span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span>’, thus:
+        <ul>
+          <li class="row1">State(guam) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> State(puertorico) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∨</span> State(alaska)</li>
+          <li class="row0">Just like ‘+’ and ‘×’ in alegebra.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row1">The Boolean connectives in Tarski’s World</li>
+      <li class="row0">The Henkin-Hintikka game
+      <ul>
+        <li class="row1">The point of this is to give you another way to understand why your sentences get the truth-values they do in TW.</li>
+        <li class="row0">If you think a sentence should be true in a world, but TW says it’s false, you can play the game to figure out where you’re going wrong.  </li>
+      </ul>
+      </li>
+      <li class="row1">For next week
+      <ul>
+        <li class="row0">Read: sections 3.1-3.8, and if you want to read ahead, 4.1-4.4; do the You try it exercises.</li>
+        <li class="row1">Do: exercises 2.22, 2.24 - 2.27, 3.6, 3.9, 3.13 - 3.15 (10% each)</li>
+      </ul>
+      </li>
+      <li class="row0"></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 22 (quantifier rules).ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">Formal proofs and the quantifiers</li>
+      <li class="row1">Straightforward rules
+      <ul>
+        <li class="row0">Here x can be any variable, c can be any individual constant [or variable-free term] in the language, S(x) stands for any formula whose only free variable is x, and S(c) stands for the result of replacing all occurrences of x in S(x) with c. 
+        <ul>
+          <li class="row1">Generous use: you can eliminate more than one universal quantifier at once. </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">Here again, x may be any variable; c may be any individual constant (or variable-free term); S(c) may be any sentence containing zero or more occurrences of c; S(x) is the result of replacing some or all of these occurrences of c with occurrences of x.  
+        <ul>
+          <li class="row0">Generous use: you can introduce more than one existential quantifier at once.  </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row1">Methods of proof
+      <ul>
+        <li class="row0">Generous interpretation: eliminate more than one at once, using more than one boxed constant</li>
+      </ul>
+      </li>
+      <li class="row1">
+      <ul>
+        <li class="row0"><span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>-elim corresponds to the informal method of existential generalisation.  This lets us, having established something of the form <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>xS(x), introduce a new ‘dummy’ name c and assert S(c).  </li>
+        <li class="row1">Example: suppose we are given the premises <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>x(Cube(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Small(x)) and <span style="font-family: 'Hiragino Kaku Gothic Pro'">∀</span>x(Cube(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> (Small(x) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> Larger(a,x))); we want to prove that  <span style="font-family: 'Hiragino Kaku Gothic Pro'">∃</span>xLarger(a,x).  We can argue as follows: by the first premise, there is a small cube.  Call it Tiny.  By the second premise, if Tiny is small, a is larger than it; but since Tiny is small, it follows that a is larger than Tiny.  Hence a is larger than something.  </li>
+      </ul>
+      </li>
+      <li class="row0"></li>
+      <li class="row1">
+      <ul>
+        <li class="row0">Corresponds to the informal method of general conditional proof.  Suppose that, just from the assumption that P(c), where c is some new dummy name, you can derive (given other things you’ve established) that Q(c).  Then you’re entled to conclude that all P’s are Q’s.  
+        <ul>
+          <li class="row1">Examples are very common in mathematics.  </li>
+          <li class="row0"></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row1">
+      <ul>
+        <li class="row0">As a special case, we allow this rule to be used with an empty assumption, thus:</li>
+        <li class="row1"></li>
+        <li class="row0"></li>
+        <li class="row1"></li>
+        <li class="row0"></li>
+        <li class="row1"></li>
+        <li class="row0">As with the other rules,  has a generous use, on which you can introduce more than one universal quantifier, using more than one boxed constant.  </li>
+      </ul>
+      </li>
+      <li class="row1">For next week
+      <ul>
+        <li class="row0">Read: through chapter 13</li>
+        <li class="row1">Do: 13.2, 13.3, 13.4, 13.7, 13.11, 13.12, 13.13, 13.16; (8% each); 12.2, 12.3 (10% each); write informal proofs based on your formal proofs of 13.2, 13.7, 13.13 and 13.16 (4% each).  </li>
+      </ul>
+      </li>
+    </ul>
+  </body>
+</html>

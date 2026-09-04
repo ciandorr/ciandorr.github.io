@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lecture 17 (conditional logic).ooutline</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"><!--
+      body { background-color: #ffffff }
+    --></style>
+  </head>
+  <body>
+  <center><b>Slides / Bullets</b></center>
+
+    <ul>
+      <li class="row0">Informal proofs using conditionals
+      <ul>
+        <li class="row1">Basic valid steps:
+        <ul>
+          <li class="row0">Modus ponens: from P and P <span style="font-family: 'Lucida Grande'">→</span> Q, infer Q.</li>
+          <li class="row1">Biconditional elimination: from P and P <span style="font-family: 'Hiragino Kaku Gothic Pro'">↔</span> Q or Q <span style="font-family: 'Hiragino Kaku Gothic Pro'">↔</span> P, infer Q.</li>
+        </ul>
+        </li>
+        <li class="row0">Other valid steps:
+        <ul>
+          <li class="row1">Modus tollens: from P <span style="font-family: 'Lucida Grande'">→</span> Q and ¬Q, infer ¬P</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">Useful equivalences:
+        <ul>
+          <li class="row0">Contraposition: P <span style="font-family: 'Lucida Grande'">→</span> Q and ¬Q <span style="font-family: 'Lucida Grande'">→</span> ¬P are logically equivalent.</li>
+          <li class="row1">P <span style="font-family: 'Hiragino Kaku Gothic Pro'">↔</span> Q and ¬Q <span style="font-family: 'Hiragino Kaku Gothic Pro'">↔</span> ¬P are also logically equivalent.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">Conditional proof
+      <ul>
+        <li class="row1">To derive a conclusion of the form P <span style="font-family: 'Lucida Grande'">→</span> Q from some premises, assume that P is true (in addition to those premises), and derive Q subject to that assumption.  </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">An example:
+        <ul>
+          <li class="row0">Given the premises (Tet(a) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Small(a)) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> Small(b) and Tet(a), we want to prove Small(a) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> Small(b).</li>
+          <li class="row1">Proof: Suppose that Small(a) is true.  Then Tet(a) <span style="font-family: 'Hiragino Kaku Gothic Pro'">∧</span> Small(a) by the second premise, and so by the first premise, Small(b).  So by conditional proof we conclude that Small(a) <span style="font-family: 'Hiragino Kaku Gothic Pro'">→</span> Small(b).</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">Another example: 8.4
+        <ul>
+          <li class="row0">Premises:  (1) The unicorn, if horned, is elusive and dangerous.  (2) If elusive or mythical, the unicorn is rare.  (3) If a mammal, the unicorn is not rare.  Conclusion: The unicorn, if horned, is not a mammal.  </li>
+          <li class="row1">Argument.  Suppose that the unicorn is horned, and assume for reductio that it is a mammal.  By (1) it is elusive, so by (2) it is rare.  But by (3) it is not rare: contradiction.  Hence, if the unicorn is horned, it is not a mammal.  </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">
+      <ul>
+        <li class="row1">Proving biconditionals.
+        <ul>
+          <li class="row0">Biconditional introduction: If we can derive Q from the assumption that P (plus our premises), and we can derive P from the assumption that Q (plus our premises), then we can derive P <span style="font-family: 'Hiragino Kaku Gothic Pro'">↔</span> Q from our premises.</li>
+          <li class="row1">Circles of proofs.</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="row0">For next week:
+      <ul>
+        <li class="row1">Read: chapters 7 and 8; optionally, chapter 9.</li>
+        <li class="row0">Do: exercises 7.6 - 7.8 (10% each); 7.11 (10%); 7.12 and 7.13 (20%); 8.3, 8.5, 8.6, 8.9 (10% each).</li>
+      </ul>
+      </li>
+    </ul>
+  </body>
+</html>
