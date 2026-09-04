@@ -154,8 +154,8 @@ ul.items.dated > li.new-year::before {
 	content: "";
 	position: absolute;
 	top: -2px;
-	left: 0;
-	width: calc(var(--gutter) - 0.6em);
+	left: calc(var(--gutter) - 0.6em - 3.2ch);   /* starts where the four digits start */
+	width: 3.2ch;
 	border-top: 1px solid #bbb;
 }
 
@@ -212,12 +212,21 @@ p.abstract {
 	border-left: 1px solid var(--rule);
 }
 
-p.links {
+p.links,
+ul.links {
 	padding-left: 2.5%;
 }
 
-p.links::before { content: "["; }
-p.links::after { content: "]"; }
+ul.links {
+	margin: 0.2em 0;
+	list-style: none;
+	font-size: 0.9em;
+	color: var(--muted);
+}
+
+ul.links > li {
+	padding: 0;
+}
 
 p.teachingkind {
 	margin: 0.3em 0 0;
